@@ -1,6 +1,6 @@
 #include "ApricotPie.h"
 
-std::string description() 
+std::string ApricotPie::description() 
 {
 	return "Apricot Pie";
 }
