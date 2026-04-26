@@ -127,7 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ApplePie.cpp" />
+    <ClCompile Include="ApricotPie.cpp" />
+    <ClCompile Include="Pie.cpp" />
+    <ClCompile Include="RaspberryPie.cpp" />
     <ClCompile Include="Week03Prac.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ApplePie.h" />
+    <ClInclude Include="ApricotPie.h" />
+    <ClInclude Include="Pie.h" />
+    <ClInclude Include="RaspberryPie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
