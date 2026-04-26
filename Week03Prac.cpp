@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <limits>
 #include "ApplePie.h"
 #include "RaspberryPie.h"
 #include "ApricotPie.h"
@@ -18,7 +19,19 @@ int main()
         std::cout << "2. Rapsberry Pie" << std::endl;
         std::cout << "3. Apricot Pie" << std::endl;
         std::cout << "Enter choice: " << std::endl;
-        std::cin >> selection;
+        //std::cin >> selection;
+
+        // This section handles non-alphanumeric character inputs
+        if (!(std::cin >> selection)) 
+        {
+            std::cout << "Invalid input. Please enter a number" << std::endl;
+
+            // reset the fail state / error flag
+            std::cin.clear(); 
+
+            //discard the bad input from cache / buffer
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
 
         if (selection == 1)
         {
